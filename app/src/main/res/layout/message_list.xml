@@ -1,15 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!--<android.support.v4.widget.CircleImageView-->
+        <!--android:id="@+id/circlehuman"-->
+        <!--android:padding="15dp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:src="@mipmap/ic_launcher"-->
+       <!--/>-->
+
+    <!--<android.support.v4.widget.CircleImageView-->
+        <!--android:id="@+id/circlebot"-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="50dp"-->
+
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:padding="15dp"-->
+        <!--android:src="@mipmap/ic_launcher" />-->
+
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/messagehuman"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/message"
+        android:minWidth="100dp"
+        android:maxWidth="250dp"
+        android:layout_gravity="end"
         android:layout_margin="8dp"
+        android:background="@drawable/rounded_rectangle_right"
+        android:ellipsize="start"
         android:padding="8dp"
-        android:text="message"
-        android:textColor="@color/colorPrimary"/>
+        android:text="@string/human"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/messagebot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="100dp"
+        android:maxWidth="250dp"
+        android:layout_alignBottom="@id/messagehuman"
+        android:layout_gravity="start"
+        android:layout_margin="8dp"
+        android:background="@drawable/rounded_rectangle_left"
+        android:padding="8dp"
+        android:text="@string/bot"
+        android:textColor="@android:color/white" />
 
 </LinearLayout>
